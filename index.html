@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Mingle - Find Your Match</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="Saagar_Kinare__Unwind_Instrumental_(128k).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Toggle Button -->
+    <button id="musicToggle" class="music-toggle" title="Toggle Music">🔊</button>
+    <div class="landing-page">
+        <!-- Hero Section 1: Welcome -->
+        <section class="hero-section hero-welcome">
+            <div class="hero-content">
+                <h1>Guy's im Single 🤧</h1>
+                <p>Are yrr is year bhi single hi reh gya yrr...</p>
+                <button class="btn btn-primary" onclick="navigateToSingle()">
+                    I'm Single
+                </button>
+            </div>
+        </section>
+
+        <!-- Hero Section 2: Mingle Section -->
+        <section class="hero-section hero-mingle">
+            <div class="hero-content">
+                <h1>Guy's im Mingle 🥰 </h1>
+                <p>Guys finally is year to kisi ke sath relationship me hu... </p>
+                <button class="btn btn-success" onclick="navigateToMingle()">
+                    I'm  Mingle
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Inline Valentine Section (hidden by default) -->
+    <section id="valentineSection" class="valentine-page" style="display:none;">
+        <div class="valentine-card">
+            <h1>Will you be my valentine ?</h1>
+            <p class="form-subtitle">Hearts are falling — choose wisely 💖</p>
+
+            <div class="valentine-actions">
+                <button id="yesBtn" class="btn-yes" onclick="window.location.href='valentine_yes.html'">Yes</button>
+                <button id="noBtn" class="btn-no">No</button>
+            </div>
+        </div>
+    </section>
+            <footer class="footer">
+               <center><h6 class="footer">Designed by : Karan Chandra Kothari 💖</h6> </center>
+            </footer>
+    <script src="script.js"></script>
+</body>
+</html>

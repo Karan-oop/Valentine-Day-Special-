@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mingle Registration - Single Mingle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="Dekha_Hi_Nahi(128k).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Toggle Button -->
+    <button id="musicToggle" class="music-toggle" title="Toggle Music">🔊</button>
+
+    <div class="page-container">
+        <!-- Back Button -->
+        <button class="btn btn-back" onclick="goBack()">← Back to Home</button>
+
+        <!-- Mingle Registration Form -->
+        <section class="form-section">
+            <div class="form-container">
+                <h1>Mingle User Registration 😍</h1>
+                <p class="form-subtitle">Bhagwan aapka relationship marriage tk le jaye. Aur aap dono hamesha khush rahe 💖💕</p>
+
+                <form id="mingleForm" class="registration-form">
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="name">Aapka Naam *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                <!-- Partner Name Field -->
+                    <div class="form-group">
+                        <label for="partnerName">Aapke Partner ka naam *</label>
+                        <input 
+                            type="text" 
+                            id="partnerName" 
+                            name="partnerName" 
+                            placeholder="Enter your partner's full name"
+                            required
+                        >
+                    </div>
+
+
+                    <!-- Age Field -->
+                    <div class="form-group">
+                        <label for="age">Aapki Umar *</label>
+                        <input 
+                            type="number" 
+                            id="age" 
+                            name="age" 
+                            placeholder="Enter your age"
+                            min="17"
+                            max="100"
+                            required
+                        >
+                    </div>
+
+                    <!-- Partner Age Field -->
+                    <div class="form-group">
+                        <label for="partnerAge"> Aapke Partner ki Umar *</label>
+                        <input 
+                            type="number" 
+                            id="partnerAge" 
+                            name="partnerAge" 
+                            placeholder="Enter your partner's age"
+                            min="17"
+                            max="100"
+                            required
+                        >
+                    </div>
+
+                    <!-- Relationship Streak Field -->
+                    <div class="form-group">
+                        <label for="relationshipStreak">Relationship Streak (Kitne salo se sath me ho) *</label>
+                        <input 
+                            type="number" 
+                            id="relationshipStreak" 
+                            name="relationshipStreak" 
+                            placeholder="How many years have you been in a relationship?"
+                            min="0"
+                            step="0.5"
+                            required
+                        >
+                    </div>
+
+                    <!-- Relationship Strength Meter -->
+                    <div class="meter-section">
+                        <div class="meter-container">
+                            <div class="progress-bar-wrapper">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="relationshipProgressFill"></div>
+                                </div>
+                                <span class="progress-percentage" id="relationshipProgressPercentage">0%</span>
+                            </div>
+                            <div class="meter-badge" id="relationshipMeterBadge">Enter your years</div>
+                        </div>
+                    </div>
+
+                    <!-- Bio Field -->
+                    <div class="form-group">
+                        <label for="bio">Apne aur apne partner ke baare me kuchh batao *</label>
+                        <textarea 
+                            id="bio" 
+                            name="bio" 
+                            placeholder="Tell us about yourself and your partner..."
+                            rows="4"
+                        ></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-submit">
+                        Register as Mingle ❤️
+                    </button>
+                </form>
+
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message hidden">
+                    <p>✓ Registration successful! Bhagwan aap dono ko hamesa khush rakhe aur aapki jodi salamat rakhe 😍</p>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+               <center><h6 class="footer">Designed by : Karan Chandra Kothari 💖</h6> </center>
+            </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

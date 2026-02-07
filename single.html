@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Registration - Single Mingle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="East_Side_Flow(128k).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Toggle Button -->
+    <button id="musicToggle" class="music-toggle" title="Toggle Music">🔊</button>
+
+    <div class="page-container">
+        <!-- Back Button -->
+        <button class="btn btn-back" onclick="goBack()">← Back to Home</button>
+
+        <!-- Single Registration Form -->
+        <section class="form-section">
+            <div class="form-container">
+                <h1>Single User Registration 😎</h1>
+                <p class="form-subtitle">Chalo ab sach bato ki Single marzi se ho ya koi mila hi nahi 😅</p>
+
+                <form id="singleForm" class="registration-form">
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="name">Aapka Naam *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                    <!-- Age Field -->
+                    <div class="form-group">
+                        <label for="age">Aapki Umar *</label>
+                        <input 
+                            type="number" 
+                            id="age" 
+                            name="age" 
+                            placeholder="Enter your age"
+                            min="18"
+                            max="100"
+                            required
+                        >
+                    </div>
+
+                    <!-- Single Streak Field -->
+                    <div class="form-group">
+                        <label for="singleStreak">Single Streak (Kitne salo se single ho) *</label>
+                        <input 
+                            type="number" 
+                            id="singleStreak" 
+                            name="singleStreak" 
+                            placeholder="How many years have you been single?"
+                            min="0"
+                            step="0.5"
+                            required
+                        >
+                    </div>
+
+                    <!-- Single Survival Meter -->
+                    <div class="meter-section">
+                        <div class="meter-container">
+                            <div class="progress-bar-wrapper">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="progressFill"></div>
+                                </div>
+                                <span class="progress-percentage" id="progressPercentage">0%</span>
+                            </div>
+                            <div class="meter-badge" id="meterBadge">Enter your years</div>
+                        </div>
+                    </div>
+
+                    <!-- Bio Field (Additional) -->
+                    <div class="form-group">
+                        <label for="bio">Single hone ka main reason...</label>
+                        <textarea 
+                            id="bio" 
+                            name="bio" 
+                            placeholder="Tell us a bit about yourself and why single so long ..."
+                            rows="4"
+                        ></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-submit">
+                        Register as Single 😫
+                    </button>
+                </form>
+
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message hidden">
+                    <p>✓ Registration successful! Aapko jald hi ek achhe partner mile 😁</p>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+               <center><h6 class="footer">Designed by : Karan Chandra Kothari 💖</h6> </center>
+            </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
